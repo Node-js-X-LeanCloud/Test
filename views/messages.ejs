@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Messages</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/messages" method="POST">
+      <input type="text" name="content" />
+      <input type="submit" value="New message" />
+    </form>
+    <ul>
+      <% for(var i=0; i<messages.length; i++) {%>
+      <li><%= messages[i].get('content') %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
